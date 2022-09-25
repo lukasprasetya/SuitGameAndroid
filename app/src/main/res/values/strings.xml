@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SuitGameAndroid</string>
+    <string name="text_let_play">Let\'s Play!</string>
+    <string name="text_ayo">Ayo</string>
+    <string name="text_draw">Draw!!!</string>
+    <string name="text_you_win">You Win!!!</string>
+    <string name="text_comp_win">Computer Win!!!</string>
+    <string name="text_suit">SUIT</string>
+    <string name="text_game">GAME</string>
 </resources>
