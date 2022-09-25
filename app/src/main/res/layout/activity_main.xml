@@ -4,15 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ijo"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/iv_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/text_let_play"
+        android:textAlignment="center"
+        android:textColor="@color/jambu"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_refresh" />
+
+    <ImageView
+        android:id="@+id/iv_player"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_left_rock"
+        app:layout_constraintEnd_toStartOf="@id/iv_com"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_com"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+
+    <ImageView
+        android:id="@+id/iv_com"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_right_scissor"
+        app:layout_constraintBottom_toTopOf="@+id/fl_paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_player"
+        app:layout_constraintTop_toBottomOf="@+id/iv_player" />
+
+    <FrameLayout
+        android:id="@+id/fl_rock"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/fl_scissor"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_rock" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_scissor"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/fl_paper"
+        app:layout_constraintStart_toEndOf="@+id/fl_rock">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_scissor" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_paper"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fl_scissor">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_paper" />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
